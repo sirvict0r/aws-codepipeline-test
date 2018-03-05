@@ -9,8 +9,11 @@ phases:
     commands:
       - echo "Installing dependencies"
       - pip install flask
+      - pip install doctest
+      - pip install pytest
+      - pip install nosetest
       - echo "Testing"
-      - python -m unittest 
+      - python pytest
   post_build:
     commands:
-      - echo Build completed on `date`
+      - echo Build completed on `test-repo`
